@@ -1,9 +1,6 @@
 # Weather API - Delhi Weather Data Analysis
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-green)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
-![Maven](https://img.shields.io/badge/Maven-3.6+-red)
+![Tech Stack](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2.0-green?style=for-the-badge&logo=springboot) ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-3.6+-red?style=for-the-badge&logo=apachemaven)
 
 ## Project Overview
 Spring Boot REST API for analyzing 20 years of Delhi weather data including temperature, humidity, pressure, and weather conditions.
