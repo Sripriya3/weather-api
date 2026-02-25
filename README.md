@@ -1,7 +1,42 @@
 # Weather API - Delhi Weather Data Analysis
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-green)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![Maven](https://img.shields.io/badge/Maven-3.6+-red)
+
 ## Project Overview
 Spring Boot REST API for analyzing 20 years of Delhi weather data including temperature, humidity, pressure, and weather conditions.
+
+## Technology Stack
+```
+┌─────────────────────────────────────────┐
+│         Presentation Layer              │
+│    REST API (Spring Web MVC)            │
+└─────────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────────┐
+│          Service Layer                  │
+│   Business Logic (Java)                 │
+└─────────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────────┐
+│        Repository Layer                 │
+│   Spring Data JPA (Java)                │
+└─────────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────────┐
+│         Database Layer                  │
+│          MySQL 8.0                      │
+└─────────────────────────────────────────┘
+```
+
+## Languages & Frameworks
+- **Backend**: Java 17 (100%)
+- **Framework**: Spring Boot 3.2.0
+- **Database**: MySQL 8.0
+- **Build Tool**: Maven
+- **Data Processing**: OpenCSV
 
 ## Architecture
 - **Model Layer**: Weather entity with JPA annotations
