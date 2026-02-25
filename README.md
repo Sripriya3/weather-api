@@ -61,6 +61,20 @@ spring.datasource.password=your_password
 csv.file.path=path/to/testset.csv
 ```
 
+**Note:** Place the `testset.csv` file in your project root or specify the full path in the configuration.
+
+### CSV File Format
+The CSV file should have the following columns:
+```
+datetime_utc, _conds, _dewptm, _fog, _hail, _heatindexm, _hum, _precipm, _pressurem, _rain, _snow, _tempm, _thunder, _tornado, _vism, _wdird, _wdire, _wgustm, _windchillm, _wspdm
+```
+
+Example data:
+```
+19961101-11:00,Smoke,9,0,0,,27,,1010,0,0,30,0,0,5,280,West,,,7.4
+19961101-12:00,Smoke,10,0,0,,32,,-9999,0,0,28,0,0,,0,North,,,
+```
+
 ### Run
 ```bash
 mvn spring-boot:run
@@ -108,6 +122,16 @@ GET http://localhost:8080/api/weather/stats/yearly/{year}
 Example: `/api/weather/stats/yearly/1996`
 
 Returns temperature stats for each month of the specified year.
+
+### 6. Filter by Year, Month, Day (NEW)
+```
+GET http://localhost:8080/api/weather/filter?year={year}&month={month}&day={day}
+```
+All parameters are optional. Examples:
+- `/api/weather/filter?year=2017` - All data for 2017
+- `/api/weather/filter?month=4` - All April data across all years
+- `/api/weather/filter?year=2017&month=4` - April 2017 data
+- `/api/weather/filter?year=2017&month=4&day=15` - April 15, 2017 data
 
 ## Project Structure
 ```
