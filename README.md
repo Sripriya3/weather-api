@@ -107,14 +107,6 @@ GET http://localhost:8080/api/weather/stats/monthly?year={year}&month={month}
 ```
 Example: `/api/weather/stats/monthly?year=1996&month=11`
 
-Returns:
-```json
-{
-  "max": 31.0,
-  "min": 15.0,
-  "median": 23.5
-}
-```
 
 ### 5. Get Yearly Statistics (All Months)
 ```
@@ -162,41 +154,6 @@ Example data:
 19961101-12:00,Smoke,10,0,0,,32,,-9999,0,0,28,0,0,,0,North,,,
 ```
 
-## Dependencies
-```xml
-<dependencies>
-    <!-- Spring Boot Web for REST API -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    
-    <!-- Spring Data JPA for database access -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-    
-    <!-- MySQL Connector -->
-    <dependency>
-        <groupId>com.mysql</groupId>
-        <artifactId>mysql-connector-j</artifactId>
-    </dependency>
-    
-    <!-- Lombok for reducing boilerplate -->
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-    </dependency>
-    
-    <!-- OpenCSV for CSV parsing -->
-    <dependency>
-        <groupId>com.opencsv</groupId>
-        <artifactId>opencsv</artifactId>
-        <version>5.9</version>
-    </dependency>
-</dependencies>
-```
 
 ## How It Works
 
@@ -281,12 +238,5 @@ Simply paste the URLs in your browser:
 - http://localhost:8080/api/weather/month/11
 - http://localhost:8080/api/weather/stats/monthly?year=1996&month=11
 
-## License
-This project is open source and available for educational purposes.
-
-## Author
-Developed as a weather data analysis REST API using Spring Boot and MySQL.
-
----
 
 **Note:** First run takes 1-2 minutes to load CSV data. Subsequent runs are instant as data is already in the database.
